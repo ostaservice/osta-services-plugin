@@ -1,0 +1,122 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Osta Services Plugin API",
+    "version": "1.0.0",
+    "description": "API for Osta Services plugin (branches, services, booking)."
+  },
+  "servers": [
+    {
+      "url": "https://ostaservice.github.io/osta-services-plugin"
+    }
+  ],
+  "paths": {
+    "/branches": {
+      "get": {
+        "summary": "Get all branches",
+        "responses": {
+          "200": {
+            "description": "List of branches",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "city": { "type": "string" },
+                      "address": { "type": "string" },
+                      "phone": { "type": "string" }
+                    }
+                  }
+                },
+                "example": [
+                  { "city": "Dubai", "address": "Zabeel, Dubai", "phone": "0568676036" },
+                  { "city": "Al Ain", "address": "Al Ain", "phone": "0568676036" },
+                  { "city": "Ajman", "address": "Emirates City B9, Ajman", "phone": "0568676036" },
+                  { "city": "Umm Al Quwain", "address": "Umm Al Quwain", "phone": "0568676036" }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/services": {
+      "get": {
+        "summary": "Get all services",
+        "responses": {
+          "200": {
+            "description": "List of services",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "type": "string" },
+                  "example": [
+                    "صيانة مكيفات",
+                    "كهرباء منزلية",
+                    "سباكة منزلية",
+                    "دهانات",
+                    "تركيب كاميرات",
+                    "صيانة أبواب وشبابيك",
+                    "تركيب وصيانة سيراميك",
+                    "تركيب وصيانة بلاط",
+                    "صيانة كهرباء مكتبية",
+                    "صيانة سباكة مكتبية",
+                    "تنظيف وصيانة عامة",
+                    "صيانة أثاث وتركيب"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/booking": {
+      "post": {
+        "summary": "Create booking (WhatsApp link)",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": { "type": "string" },
+                  "phone": { "type": "string" },
+                  "city": { "type": "string" },
+                  "service": { "type": "string" },
+                  "address": { "type": "string" },
+                  "time": { "type": "string" }
+                },
+                "required": ["name", "phone", "city", "service", "address"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "WhatsApp booking link",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": { "type": "string" },
+                    "whatsapp_link": { "type": "string" }
+                  },
+                  "example": {
+                    "message": "Booking link generated",
+                    "whatsapp_link": "https://wa.me/971568676036?text=..."
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

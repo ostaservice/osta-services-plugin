@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "خدمات أسطا | Osta Services",
+  "name_for_model": "osta_services",
+  "description_for_human": "Plugin يطلع فروع Osta Services، الخدمات، والأسعار، ويساعد في حجز خدمة عبر WhatsApp.",
+  "description_for_model": "Use this plugin to fetch Osta Services branches, services, pricing, and generate a WhatsApp booking link.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://ostaservice.github.io/osta-services-plugin/openapi.json"
+  },
+  "logo_url": "https://ostaservice.github.io/osta-services-plugin/logo.png",
+  "contact_email": "info@ostaservices.com",
+  "legal_info_url": "https://www.ostaservices.com"
+}

@@ -9,9 +9,9 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://ostaservice.github.io/osta-services-plugin/openapi.json"
+    "url": "https://osta-services-plugin.vercel.app/openapi.json"
   },
-  "logo_url": "https://ostaservice.github.io/osta-services-plugin/logo.png",
+  "logo_url": "https://osta-services-plugin.vercel.app/logo.png",
   "contact_email": "info@ostaservices.com",
   "legal_info_url": "https://www.ostaservices.com"
 }

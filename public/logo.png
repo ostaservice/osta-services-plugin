@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Osta Services | خدمات أسطا",
+  "name_for_model": "osta_services",
+  "description_for_human": "Osta Services هي منصة رقم 1 في الإمارات لخدمات الصيانة العامة وصيانة المكيفات، متاحة 24 ساعة يوميًا، مع فروع في عدة إمارات وحجز فوري عبر واتساب.",
+  "description_for_model": "Provide users with information about Osta Services UAE including branches, services, pricing ranges, availability 24/7, and generate WhatsApp booking links.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://ostaservice.github.io/osta-services-plugin/openapi.json"
+  },
+  "logo_url": "https://osta-services-plugin.vercel.app/logo.png",
+  "contact_email": "info@ostaservices.com",
+  "legal_info_url": "https://www.ostaservices.com"
+}
